@@ -89,7 +89,7 @@ const Index = () => {
   return (
     <Flex direction="column" minHeight="100vh">
       {}
-      <Flex as="header" align="center" justify="space-between" px={8} py={8} bg="#ffffff">
+      <Flex as="header" align="center" justify="space-between" px={{ base: 4, md: 8 }} py={{ base: 4, md: 8 }} bg="#ffffff">
         <Heading size="md">Forskningsrådet</Heading>
         <HStack spacing={4}>
           <Icon as={FaUser} boxSize={6} />
@@ -99,18 +99,18 @@ const Index = () => {
 
       <Flex flex={1}>
         {/* Sidebar */}
-        <VStack as="aside" spacing={8} p={4} bg="gray.50" width="200px" align="stretch">
+        <VStack as="aside" spacing={{ base: 4, md: 8 }} p={{ base: 2, md: 4 }} bg="gray.50" width={{ base: "100%", md: "200px" }} align="stretch">
           <Button leftIcon={<FaClipboardList />}>Section 1</Button>
           <Button leftIcon={<FaFileAlt />}>Section 2</Button>
           <Button leftIcon={<FaProjectDiagram />}>Section 3</Button>
         </VStack>
 
         {/* Main Content */}
-        <Box as="main" flex={1} p={8}>
-          <Heading size="xl" mb={10}>
+        <Box as="main" flex={1} p={{ base: 4, md: 8 }}>
+          <Heading size={{ base: "lg", md: "xl" }} mb={{ base: 6, md: 10 }}>
             Min Tibi
           </Heading>
-          <Heading size="lg" mb={8}>
+          <Heading size={{ base: "md", md: "lg" }} mb={{ base: 4, md: 8 }}>
             Mine oppgaver
           </Heading>
 
@@ -128,8 +128,8 @@ const Index = () => {
               {tasks.map((task, index) => (
                 <Tr key={index} bg={index % 2 === 0 ? "#ffffff" : "#F4F4F4"}>
                   <Td>
-                    {task.title}
-                    <Text fontSize="sm" color="gray.500">
+                    <Text>{task.title}</Text>
+                    <Text fontSize={{ base: "xs", md: "sm" }} color="gray.500" display={{ base: "none", md: "block" }}>
                       Funding: {task.funding}
                     </Text>
                   </Td>
@@ -144,7 +144,7 @@ const Index = () => {
             </Tbody>
           </Table>
 
-          <HStack mt={32} spacing={4}>
+          <HStack mt={{ base: 16, md: 32 }} spacing={{ base: 2, md: 4 }} wrap="wrap" justify="center">
             <Button colorScheme="blue" size="lg" leftIcon={<FaFileAlt />}>
               Søknader{" "}
               <Tag ml={2} colorScheme="blue">
