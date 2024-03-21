@@ -123,7 +123,7 @@ const Index = () => {
             </Thead>
             <Tbody>
               {tasks.map((task, index) => (
-                <Tr key={index}>
+                <Tr key={index} bg={index % 2 === 0 ? "#ffffff" : "#F4F4F4"}>
                   <Td>
                     {task.title}
                     <Text fontSize="sm" color="gray.500">
