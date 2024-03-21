@@ -137,7 +137,7 @@ const Index = () => {
                   <Td>{task.project}</Td>
                   <Td>{task.organization}</Td>
                   <Td>
-                    <Tag colorScheme="red" py={8} px={4}>
+                    <Tag colorScheme="red" py={4} px={4}>
                       {task.deadline}
                     </Tag>
                   </Td>
@@ -149,13 +149,13 @@ const Index = () => {
           <HStack mt={{ base: 16, md: 32 }} spacing={{ base: 2, md: 4 }} wrap="wrap" justify="center">
             <Button colorScheme="blue" size="lg" leftIcon={<FaFileAlt />}>
               Søknader{" "}
-              <Tag ml={2} colorScheme="blue" py={8} px={4}>
+              <Tag ml={2} colorScheme="blue" py={4} px={4}>
                 10
               </Tag>
             </Button>
             <Button colorScheme="green" size="lg" leftIcon={<FaProjectDiagram />}>
               Prosjekter{" "}
-              <Tag ml={2} colorScheme="green" py={8} px={4}>
+              <Tag ml={2} colorScheme="green" py={4} px={4}>
                 5
               </Tag>
             </Button>
