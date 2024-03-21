@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Heading, Text, Icon, Table, Thead, Tbody, Tr, Th, Td, Button, VStack, HStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Icon, Table, Thead, Tbody, Tr, Th, Td, Button, VStack, HStack, Tag } from "@chakra-ui/react";
 import { FaUser, FaCog, FaClipboardList, FaFileAlt, FaProjectDiagram, FaCalendarAlt, FaBuilding } from "react-icons/fa";
 
 const Index = () => {
@@ -63,18 +63,26 @@ const Index = () => {
                   <Td>{task.ordning}</Td>
                   <Td>{task.project}</Td>
                   <Td>{task.organization}</Td>
-                  <Td color="red.500">{task.deadline}</Td>
+                  <Td>
+                    <Tag colorScheme="red">{task.deadline}</Tag>
+                  </Td>
                 </Tr>
               ))}
             </Tbody>
           </Table>
 
           <HStack mt={8} spacing={4}>
-            <Button leftIcon={<FaFileAlt />}>
-              Søknader <Text ml={2}>10</Text>
+            <Button colorScheme="blue" size="lg" leftIcon={<FaFileAlt />}>
+              Søknader{" "}
+              <Tag ml={2} colorScheme="blue">
+                10
+              </Tag>
             </Button>
-            <Button leftIcon={<FaProjectDiagram />}>
-              Prosjekter <Text ml={2}>5</Text>
+            <Button colorScheme="green" size="lg" leftIcon={<FaProjectDiagram />}>
+              Prosjekter{" "}
+              <Tag ml={2} colorScheme="green">
+                5
+              </Tag>
             </Button>
           </HStack>
         </Box>
