@@ -89,7 +89,7 @@ const Index = () => {
   return (
     <Flex direction="column" minHeight="100vh">
       {}
-      <Flex as="header" align="center" justify="space-between" px={4} py={4} bg="#ffffff">
+      <Flex as="header" align="center" justify="space-between" px={8} py={8} bg="#ffffff">
         <Heading size="md">Forskningsrådet</Heading>
         <HStack spacing={4}>
           <Icon as={FaUser} boxSize={6} />
