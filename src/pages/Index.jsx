@@ -107,7 +107,7 @@ const Index = () => {
 
         {/* Main Content */}
         <Box as="main" flex={1} p={8}>
-          <Heading size="xl" mb={4}>
+          <Heading size="xl" mb={10}>
             Min Tibi
           </Heading>
           <Heading size="lg" mb={8}>
